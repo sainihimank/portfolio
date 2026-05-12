@@ -24,12 +24,12 @@ function OrbitingSkillIcons() {
   ];
 
   const orbitConfigs = useMemo(() => {
-    const baseRadius = 0.84;
+    const baseRadius = 0.80 ;
     return icons.map((_, idx) => {
       const lane = idx % 4;
       const radius = baseRadius + lane * 0.045;
       const tiltX = (-30 + lane * 20) * (Math.PI / 180);
-      const tiltZ = (idx * 37 * Math.PI) / 180;
+      const tiltZ = (idx * 137.5 * Math.PI) / 180;
       const phase = (idx / icons.length) * Math.PI * 2;
       const speed = 0.35;
       return { radius, tiltX, tiltZ, phase, speed };
@@ -56,12 +56,12 @@ function OrbitingSkillIcons() {
               rotation={[0, orbit.phase, 0]}
             >
               {Array.from({ length: 80 }).map((_, tailIdx) => {
-                const t = tailIdx + 1;
+                const t = tailIdx;
                 const tailLength = 80;
                 const opacity = 0.85 * (1 - tailIdx / tailLength);
                 const scale = 0.0048 * (1 - tailIdx / (tailLength + 20));
                 return (
-                  <group key={tailIdx} rotation={[0, -t * 0.03, 0]}>
+                  <group key={tailIdx} rotation={[0, -t * 0.015, 0]}>
                     <mesh position={[orbit.radius, 0, 0]} scale={scale}>
                       <sphereGeometry args={[1, 8, 8]} />
                       <meshBasicMaterial color="#050505" transparent opacity={opacity} />
@@ -70,7 +70,7 @@ function OrbitingSkillIcons() {
                 );
               })}
               <Html position={[orbit.radius, 0, 0]} sprite>
-                <div className="rounded-full bg-transparent p-1">
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-transparent leading-none">
                   <Icon size={23} color={color} />
                 </div>
               </Html>
@@ -138,7 +138,7 @@ function DottedGlobe() {
 
 export function Globe() {
   return (
-    <div className="mx-auto h-[22rem] w-full max-w-full bg-transparent border">
+    <div className="mx-auto h-[22rem] w-full max-w-full bg-transparent">
       <Canvas
         camera={{ position: [0, 0, 3.05], fov: 42 }}
         gl={{ alpha: true, antialias: true }}

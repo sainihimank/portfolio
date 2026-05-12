@@ -14,21 +14,21 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "project-alpha",
-    title: "Project Alpha",
-    description: "Desktop web app focused on speed, clarity, and business value.",
-    tags: ["Next.js", "TypeScript", "Tailwind"],
-    github: "https://github.com/Szostak21/Cube_Solver",
-    demo: "https://github.com/Szostak21/Cube_Solver",
+    title: "Motodevil.shop",
+    description: "Desktop web app  Premium Cap store",
+    tags: ["Next.js", "TypeScript", "Tailwind" , "supabase"],
+    github: "https://github.com/sainihimank",
+    demo: "https://motodevil.shop/",
     featured: true,
     deviceType: "desktop",
     bgColor: "bg-linear-to-br from-violet-500/90 to-fuchsia-500/90",
     screenshots: [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop",
+      "/image.png"
     ],
   },
   {
-    id: "project-beta",
-    title: "Project Beta",
+    id: "Trip Itinerary Planner",
+    title: "Trip Itinerary Planner",
     description: "Mobile-first product with polished UX and strong architecture.",
     tags: ["React Native", "Expo", "Node.js"],
     github: "https://github.com/Szostak21/Guess-who",

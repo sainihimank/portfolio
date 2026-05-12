@@ -20,9 +20,9 @@ const timeline = [
 ];
 
 const mindsetImages = [
-  "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=900&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?q=80&w=900&auto=format&fit=crop",
+  "/gundam.jpeg",
+  "/art.jpeg",
+  "/track.jpeg",
 ];
 
 export function About() {
@@ -67,19 +67,20 @@ export function About() {
           <article className="overflow-hidden rounded-3xl border border-(--card-border)">
             <div className="grid grid-cols-2 gap-1 bg-(--card-border)/35 p-1">
               <Image
-                src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop"
+                src="/himank.jpeg"
+      
                 alt="Gallery 1"
                 width={700}
                 height={700}
                 className="aspect-square w-full rounded-2xl object-cover"
               />
-              <Image
+              {/* <Image
                 src="https://images.unsplash.com/photo-1529074963764-98f45c47344b?q=80&w=1000&auto=format&fit=crop"
                 alt="Gallery 2"
                 width={700}
                 height={700}
                 className="aspect-square w-full rounded-2xl object-cover"
-              />
+              /> */}
             </div>
           </article>
 
